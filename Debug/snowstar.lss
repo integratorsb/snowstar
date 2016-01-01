@@ -1,0 +1,316 @@
+
+snowstar.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002a8  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000002fc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000002fc  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000032c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  00000368  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000049a  00000000  00000000  00000388  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001ba  00000000  00000000  00000822  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000171  00000000  00000000  000009dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00000b50  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000020e  00000000  00000000  00000b74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000215  00000000  00000000  00000d82  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000010  00000000  00000000  00000f97  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	da c0       	rjmp	.+436    	; 0x1b6 <__ctors_end>
+   2:	df c0       	rjmp	.+446    	; 0x1c2 <__bad_interrupt>
+   4:	de c0       	rjmp	.+444    	; 0x1c2 <__bad_interrupt>
+   6:	dd c0       	rjmp	.+442    	; 0x1c2 <__bad_interrupt>
+   8:	dc c0       	rjmp	.+440    	; 0x1c2 <__bad_interrupt>
+   a:	db c0       	rjmp	.+438    	; 0x1c2 <__bad_interrupt>
+   c:	da c0       	rjmp	.+436    	; 0x1c2 <__bad_interrupt>
+   e:	d9 c0       	rjmp	.+434    	; 0x1c2 <__bad_interrupt>
+  10:	d8 c0       	rjmp	.+432    	; 0x1c2 <__bad_interrupt>
+  12:	d7 c0       	rjmp	.+430    	; 0x1c2 <__bad_interrupt>
+
+00000014 <__trampolines_end>:
+  14:	74 01       	movw	r14, r8
+  16:	22 00       	.word	0x0022	; ????
+  18:	d4 00       	.word	0x00d4	; ????
+  1a:	a0 00       	.word	0x00a0	; ????
+  1c:	20 00       	.word	0x0020	; ????
+  1e:	b4 00       	.word	0x00b4	; ????
+
+00000020 <tune3>:
+  20:	b0 4f 4d 4b a9 4d 50 74 b2 4b 77 35 95 94 8d 8f     .OMK.MPt.Kw5....
+  30:	b0 4f 6d 4b a9 66 4f 4d 8c 20 0c 0d 8f 8c 8d 8d     .OmK.fOM. ......
+  40:	20 28 4d 28 2d 2d 28 26 24 63 24 43 61 20 2b 2b      (M(--(&$c$Ca ++
+  50:	2b 2b 2d 2b 29 88 40 68 26 48 26 26 26 48 26 70     ++-+).@h&H&&&H&p
+  60:	6f 66 24 46 24 24 24 46 24 4f 6d 20 43 23 23 23     of$F$$$F$Om C###
+  70:	23 23 64 43 42 63 88 60 90 4f 4f 2d 2f 30 50 2f     ##dCBc.`.OO-/0P/
+  80:	4f 2d 2f 70 30 6f 2d 2b 49 28 26 28 8b 20 2b 6b     O-/p0o-+I(&(. +k
+  90:	29 26 23 66 29 49 28 2d 70 30 4f 2a 2d 2c 4d 2f     )&#f)I(-p0O*-,M/
+  a0:	6d 90 6f 4f 2d 2f 30 50 2f 6f 2d 2f 70 30 4f 2d     m.oO-/0P/o-/p0O-
+  b0:	2b 49 28 26 28 8b 20 2b 6b 29 26 23 66 29 49 28     +I(&(. +k)&#f)I(
+  c0:	2d 70 30 6f 2a 2d 2c 6d 2f 4d 90 6f 4f 2a 2d 6c     -p0o*-,m/M.oO*-l
+  d0:	2d 2f 8d a0                                         -/..
+
+000000d4 <tune2>:
+  d4:	78 54 51 4e 54 53 73 33 34 33 31 4f 4e 74 53 78     xTQNTSs3431ONtSx
+  e4:	54 51 4e 54 53 73 33 34 33 31 4f 4e 8c 58 40 54     TQNTSs3431ON.X@T
+  f4:	51 4e 54 53 73 33 34 33 31 4f 4e 74 53 78 54 51     QNTSs3431ONtSxTQ
+ 104:	4e 54 53 73 33 34 33 31 4f 4e 8c 58 8c 53 53 73     NTSs3431ON.X.SSs
+ 114:	2e 51 4f 4c 40 4a 4a 76 34 74 73 40 36 34 51 4e     .QOL@JJv4ts@64QN
+ 124:	74 33 73 40 33 33 73 31 51 8f 40 33 33 73 2e 31     t3s@33s1Q.@33s.1
+ 134:	2f 8c 4a 4a 76 34 74 53 78 54 51 4e 54 53 73 53     /.JJv4tSxTQNTSsS
+ 144:	53 53 51 51 6f 78 54 51 4e 54 53 73 53 53 53 57     SSQQoxTQNTSsSSSW
+ 154:	4e 8c 58 54 51 4e 54 53 73 33 34 33 31 4f 4e 74     N.XTQNTSs3431ONt
+ 164:	53 78 54 51 4e 54 53 73 33 34 33 31 4f 4e 8c 80     SxTQNTSs3431ON..
+
+00000174 <tune1>:
+ 174:	94 71 71 94 71 71 74 72 71 6f ad 96 79 76 94 71     .qq.qqtrqo..yv.q
+ 184:	71 74 72 71 6f ad 96 79 76 94 71 71 74 72 71 6f     qtrqo..yv.qqtrqo
+ 194:	ad a0                                               ..
+
+00000196 <notes>:
+ 196:	00 8f 87 80 79 72 6b 65 60 5a 55 50 4c 47 43 40     ....yrke`ZUPLGC@
+ 1a6:	3c 39 35 32 30 2d 2a 28 26 23 21 20 1e 1c 1a 18     <9520-*(&#! ....
+
+000001b6 <__ctors_end>:
+ 1b6:	11 24       	eor	r1, r1
+ 1b8:	1f be       	out	0x3f, r1	; 63
+ 1ba:	cf e9       	ldi	r28, 0x9F	; 159
+ 1bc:	cd bf       	out	0x3d, r28	; 61
+ 1be:	02 d0       	rcall	.+4      	; 0x1c4 <main>
+ 1c0:	71 c0       	rjmp	.+226    	; 0x2a4 <_exit>
+
+000001c2 <__bad_interrupt>:
+ 1c2:	1e cf       	rjmp	.-452    	; 0x0 <__vectors>
+
+000001c4 <main>:
+	
+	uint8_t  n, nt, nTunes;
+	uint8_t *pTunes;
+	uint16_t i, szTunes;
+	
+	cli();
+ 1c4:	f8 94       	cli
+	PORTB = (1<<PBTN);
+ 1c6:	84 e0       	ldi	r24, 0x04	; 4
+ 1c8:	88 bb       	out	0x18, r24	; 24
+	DDRB = (1<<PORTB0) | (1<<PLED);
+ 1ca:	83 e0       	ldi	r24, 0x03	; 3
+ 1cc:	87 bb       	out	0x17, r24	; 23
+	
+	// режим CTC
+	// максивальная частота таймера 37500Гц 
+	TCCR0A = (1<<COM0A0) | (1<<WGM01); // дергаем ногой по совпадению
+ 1ce:	92 e4       	ldi	r25, 0x42	; 66
+ 1d0:	9f bd       	out	0x2f, r25	; 47
+	TCCR0B = (1<<CS01) | (1<<CS00); // делитель на 64
+ 1d2:	83 bf       	out	0x33, r24	; 51
+	sei();
+ 1d4:	78 94       	sei
+	
+	nTunes = 0; // номер мелодии
+ 1d6:	20 e0       	ldi	r18, 0x00	; 0
+		// цикл воспроизведения
+		for(i = 0; i < szTunes; i++)
+		{
+			
+			nt = pgm_read_byte(&pTunes[i]);// нота	
+			n = 1<<((nt>>5));// длительность
+ 1d8:	d1 e0       	ldi	r29, 0x01	; 1
+
+			OCR0A = pgm_read_byte(&notes[nt]); // загружаем коэффициент
+			
+			// проигрываем ноту
+			if(nt != nSL)
+				TCCR0B = (1<<CS01) | (1<<CS00); // вкл. таймер
+ 1da:	33 e0       	ldi	r19, 0x03	; 3
+					break; // выходим из цикла воспроизведения
+				}
+			}
+			
+			// просто мигалка
+			PORTB ^= 1<<PLED;
+ 1dc:	c2 e0       	ldi	r28, 0x02	; 2
+	nTunes = 0; // номер мелодии
+	
+    while (1) 
+    {	
+		
+		PORTB &= ~(1<<PLED);//
+ 1de:	c1 98       	cbi	0x18, 1	; 24
+		
+		if(nTunes >= CTUNES)
+ 1e0:	23 30       	cpi	r18, 0x03	; 3
+ 1e2:	08 f0       	brcs	.+2      	; 0x1e6 <main+0x22>
+			nTunes = 0;
+ 1e4:	20 e0       	ldi	r18, 0x00	; 0
+		// загружаем указатель на мелодию в памяти
+		pTunes =  (uint8_t*)pgm_read_word(&ttbl[nTunes].p);
+ 1e6:	82 2f       	mov	r24, r18
+ 1e8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ea:	88 0f       	add	r24, r24
+ 1ec:	99 1f       	adc	r25, r25
+ 1ee:	88 0f       	add	r24, r24
+ 1f0:	99 1f       	adc	r25, r25
+ 1f2:	fc 01       	movw	r30, r24
+ 1f4:	ec 5e       	subi	r30, 0xEC	; 236
+ 1f6:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1f8:	45 91       	lpm	r20, Z+
+ 1fa:	54 91       	lpm	r21, Z
+		// и её размер в байтах
+		szTunes = pgm_read_word(&ttbl[nTunes].sz);
+ 1fc:	fc 01       	movw	r30, r24
+ 1fe:	ea 5e       	subi	r30, 0xEA	; 234
+ 200:	ff 4f       	sbci	r31, 0xFF	; 255
+ 202:	a5 91       	lpm	r26, Z+
+ 204:	b4 91       	lpm	r27, Z
+		
+		// цикл воспроизведения
+		for(i = 0; i < szTunes; i++)
+ 206:	60 e0       	ldi	r22, 0x00	; 0
+ 208:	70 e0       	ldi	r23, 0x00	; 0
+ 20a:	6a 17       	cp	r22, r26
+ 20c:	7b 07       	cpc	r23, r27
+ 20e:	09 f4       	brne	.+2      	; 0x212 <main+0x4e>
+ 210:	3f c0       	rjmp	.+126    	; 0x290 <main+0xcc>
+ 212:	fb 01       	movw	r30, r22
+ 214:	e4 0f       	add	r30, r20
+ 216:	f5 1f       	adc	r31, r21
+		{
+			
+			nt = pgm_read_byte(&pTunes[i]);// нота	
+ 218:	84 91       	lpm	r24, Z
+			n = 1<<((nt>>5));// длительность
+ 21a:	98 2f       	mov	r25, r24
+ 21c:	92 95       	swap	r25
+ 21e:	96 95       	lsr	r25
+ 220:	97 70       	andi	r25, 0x07	; 7
+ 222:	ed 2f       	mov	r30, r29
+ 224:	01 c0       	rjmp	.+2      	; 0x228 <main+0x64>
+ 226:	ee 0f       	add	r30, r30
+ 228:	9a 95       	dec	r25
+ 22a:	ea f7       	brpl	.-6      	; 0x226 <main+0x62>
+ 22c:	9e 2f       	mov	r25, r30
+			nt = nt & 0x1f;
+ 22e:	8f 71       	andi	r24, 0x1F	; 31
+
+			OCR0A = pgm_read_byte(&notes[nt]); // загружаем коэффициент
+ 230:	e8 2f       	mov	r30, r24
+ 232:	f0 e0       	ldi	r31, 0x00	; 0
+ 234:	ea 56       	subi	r30, 0x6A	; 106
+ 236:	fe 4f       	sbci	r31, 0xFE	; 254
+ 238:	e4 91       	lpm	r30, Z
+ 23a:	e6 bf       	out	0x36, r30	; 54
+			
+			// проигрываем ноту
+			if(nt != nSL)
+ 23c:	81 11       	cpse	r24, r1
+				TCCR0B = (1<<CS01) | (1<<CS00); // вкл. таймер
+ 23e:	33 bf       	out	0x33, r19	; 51
+
+			while(n != 0)
+ 240:	99 23       	and	r25, r25
+ 242:	59 f0       	breq	.+22     	; 0x25a <main+0x96>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 244:	ff ef       	ldi	r31, 0xFF	; 255
+ 246:	80 ee       	ldi	r24, 0xE0	; 224
+ 248:	e0 e0       	ldi	r30, 0x00	; 0
+ 24a:	f1 50       	subi	r31, 0x01	; 1
+ 24c:	80 40       	sbci	r24, 0x00	; 0
+ 24e:	e0 40       	sbci	r30, 0x00	; 0
+ 250:	e1 f7       	brne	.-8      	; 0x24a <main+0x86>
+ 252:	00 c0       	rjmp	.+0      	; 0x254 <main+0x90>
+ 254:	00 00       	nop
+			{
+				_delay_ms(B_DUR);
+				n--;
+ 256:	91 50       	subi	r25, 0x01	; 1
+ 258:	f3 cf       	rjmp	.-26     	; 0x240 <main+0x7c>
+			}
+			
+			// пауза перед следующей нотой
+			TCCR0B = 0;// выкл. таймер
+ 25a:	13 be       	out	0x33, r1	; 51
+ 25c:	8f e6       	ldi	r24, 0x6F	; 111
+ 25e:	97 e1       	ldi	r25, 0x17	; 23
+ 260:	01 97       	sbiw	r24, 0x01	; 1
+ 262:	f1 f7       	brne	.-4      	; 0x260 <main+0x9c>
+ 264:	00 c0       	rjmp	.+0      	; 0x266 <main+0xa2>
+ 266:	00 00       	nop
+			_delay_ms(B_PAUSE);
+			
+			// во время паузы проверяем кнопку
+			if(!(PINB & 1<<PBTN))
+ 268:	b2 99       	sbic	0x16, 2	; 22
+ 26a:	0c c0       	rjmp	.+24     	; 0x284 <main+0xc0>
+ 26c:	ef e5       	ldi	r30, 0x5F	; 95
+ 26e:	fa ee       	ldi	r31, 0xEA	; 234
+ 270:	31 97       	sbiw	r30, 0x01	; 1
+ 272:	f1 f7       	brne	.-4      	; 0x270 <main+0xac>
+ 274:	00 c0       	rjmp	.+0      	; 0x276 <main+0xb2>
+ 276:	00 00       	nop
+			{
+				_delay_ms(50);
+				if(!(PINB & 1<<PBTN))
+ 278:	b2 99       	sbic	0x16, 2	; 22
+ 27a:	04 c0       	rjmp	.+8      	; 0x284 <main+0xc0>
+				{
+					while(!(PINB & 1<<PBTN)){};
+ 27c:	b2 9b       	sbis	0x16, 2	; 22
+ 27e:	fe cf       	rjmp	.-4      	; 0x27c <main+0xb8>
+						
+					nTunes++;
+ 280:	2f 5f       	subi	r18, 0xFF	; 255
+					break; // выходим из цикла воспроизведения
+ 282:	06 c0       	rjmp	.+12     	; 0x290 <main+0xcc>
+				}
+			}
+			
+			// просто мигалка
+			PORTB ^= 1<<PLED;
+ 284:	88 b3       	in	r24, 0x18	; 24
+ 286:	8c 27       	eor	r24, r28
+ 288:	88 bb       	out	0x18, r24	; 24
+		pTunes =  (uint8_t*)pgm_read_word(&ttbl[nTunes].p);
+		// и её размер в байтах
+		szTunes = pgm_read_word(&ttbl[nTunes].sz);
+		
+		// цикл воспроизведения
+		for(i = 0; i < szTunes; i++)
+ 28a:	6f 5f       	subi	r22, 0xFF	; 255
+ 28c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 28e:	bd cf       	rjmp	.-134    	; 0x20a <main+0x46>
+ 290:	ff ef       	ldi	r31, 0xFF	; 255
+ 292:	45 ea       	ldi	r20, 0xA5	; 165
+ 294:	8e e0       	ldi	r24, 0x0E	; 14
+ 296:	f1 50       	subi	r31, 0x01	; 1
+ 298:	40 40       	sbci	r20, 0x00	; 0
+ 29a:	80 40       	sbci	r24, 0x00	; 0
+ 29c:	e1 f7       	brne	.-8      	; 0x296 <main+0xd2>
+ 29e:	00 c0       	rjmp	.+0      	; 0x2a0 <main+0xdc>
+ 2a0:	00 00       	nop
+ 2a2:	9d cf       	rjmp	.-198    	; 0x1de <main+0x1a>
+
+000002a4 <_exit>:
+ 2a4:	f8 94       	cli
+
+000002a6 <__stop_program>:
+ 2a6:	ff cf       	rjmp	.-2      	; 0x2a6 <__stop_program>
